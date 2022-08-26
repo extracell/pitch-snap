@@ -1,0 +1,14 @@
+param -name mix -min 0 -max 100 -default 100;
+param -name freq smooth -min 0 -max 100 -default 10;
+param -name amp smooth -min 1 -max 100 -default 5;
+param -name pitch -min -12 -max 12 -default 0;
+param -name pitch correct -min 0 -max 1 -default 1;
+param -name high split -min 2000 -max 21000 -default 21000;
+param -name high split enabled -min 0 -max 1 -default 1;
+iolayout 2 2;
+code Ubpi;
+type effect;
+image pitch snap.png;
+description infos.txt;
+manufacturer extracell
+compatibility 1.0.7;
