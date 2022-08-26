@@ -24,7 +24,11 @@ to install this plugin, extract it into your vst3 folder.
 - on windows the folder is normally c:\program files\common files\vst3
 - on mac the folder is normally library/audio/plug-ins/vst3
 
+## changing source files
+
+the architecture of this plugin allows users to edit source files on the fly and apply changes to the plugin simply by reloading it. the camomile wiki and pure data manual are good starting points if you're looking to make changes or even make your own pure data plugins. 
+
 ## credits
 
-- [Pure Data](https://puredata.info/) by Miller Puckette and others
-- [Camomile](https://github.com/pierreguillot/Camomile) by Pierre Guillot
+- [pure data](https://puredata.info/) by miller puckette and others
+- [camomile](https://github.com/pierreguillot/Camomile) by pierre guillot
