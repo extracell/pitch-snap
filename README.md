@@ -4,10 +4,6 @@ pitch snap is a plugin that separates audio in real time into 20 sine partials a
 
 download the plugin from the "releases" page.
 
-## warning
-
-this plugin resets all parameters whenever it is loaded, even if the project it is loaded in is saved. this is a bug and i might look into fixing it if there's a lot of interest in the plugin. for now, you can bounce sounds to audio or automate any parameters you change to preserve their state. my recommendation is to bounce the wet signal so you can mix it in and maintain control of the dry signal.
-
 ## parameters
 
 - the grid allows each note in a scale to be shifted to a different note. for example, all instances of 'c#' can be shifted to 'e'. notes are ordered from c (bottom) to b (top), although the base note can be shifted by semitones with the "pitch" control.
@@ -23,6 +19,8 @@ this plugin resets all parameters whenever it is loaded, even if the project it 
 to install this plugin, extract it into your vst3 folder.
 - on windows the folder is normally c:\program files\common files\vst3
 - on mac the folder is normally library/audio/plug-ins/vst3
+
+if you're on mac, you will have to do some additional work to get the plugin running. you can find instructions and a video [here](https://github.com/pierreguillot/Camomile/wiki/How-to-generate-plugins#manual-all-operating-system).
 
 ## changing source files
 
