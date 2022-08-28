@@ -1,0 +1,74 @@
+#N canvas 257 107 720 604 10;
+#X obj 263 54 unpack f f;
+#X obj 263 88 swap, f 10;
+#X msg 320 175 set \$1;
+#X obj 320 405 swap, f 10;
+#X obj 320 426 pack f f, f 10;
+#X obj 434 444 f;
+#X obj 407 533 send, f 5;
+#X obj 10 65 array define \$0-params \$1;
+#X obj 320 154 array get \$0-params 0 1;
+#X obj 320 446 outlet;
+#X obj 320 355 t f f, f 15;
+#X obj 407 421 t f b;
+#X obj 452 333 symbol \$2;
+#X obj 407 398 spigot 0;
+#X obj 452 354 sel \$2;
+#X obj 452 312 loadbang;
+#X obj 452 376 f 1;
+#X obj 434 499 makefilename \$2-%d;
+#X text 521 320 If a symbol is provided for the second argument \,
+use it as a send symbol, f 22;
+#X text 550 491 Generate dynamically the send symbol using the index
+of the parameter, f 25;
+#X text 460 429 Store the current index of the parameter but do not
+generate the send symbol if the value has not changed, f 28;
+#X text 288 468 Output the index and the value of the parameter, f
+18;
+#X obj 10 21 loadbang;
+#X msg 10 42 const -1e+16;
+#X obj 320 222 change;
+#X obj 340 271 array set \$0-params;
+#X text 471 149 Get the previous value of the parameter from the array
+and give it to the change object for comparison, f 24;
+#X text 462 266 Save the new value to the array, f 18;
+#X text 331 107 Index;
+#X text 230 107 Value;
+#X text 230 69 Index;
+#X text 331 69 Value;
+#X text 138 213 Compare the previous value with the new value and output
+it if there is a difference, f 30;
+#X text 353 24 Receive all the parameters;
+#X text 9 88 At loading \, initialize an array of values for the parameters
+with a non-attainable default value to avoid unwanted filtering if
+the first value is zero. The number of parameter must defined with
+the first argument., f 36;
+#X obj 263 24 receive param;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 24 0;
+#X connect 1 1 3 1;
+#X connect 1 1 5 1;
+#X connect 1 1 8 0;
+#X connect 1 1 25 1;
+#X connect 2 0 24 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 9 0;
+#X connect 5 0 17 0;
+#X connect 8 0 2 0;
+#X connect 10 0 3 0;
+#X connect 10 1 13 0;
+#X connect 11 0 6 0;
+#X connect 11 1 5 0;
+#X connect 12 0 14 0;
+#X connect 13 0 11 0;
+#X connect 14 0 16 0;
+#X connect 15 0 12 0;
+#X connect 16 0 13 1;
+#X connect 17 0 6 1;
+#X connect 22 0 23 0;
+#X connect 23 0 7 0;
+#X connect 24 0 10 0;
+#X connect 24 0 25 0;
+#X connect 35 0 0 0;
