@@ -6,6 +6,7 @@ download the plugin from the "releases" page.
 
 ## parameters
 
+- the column on the right side allows for auditioning notes and chords before they are selected in the grid. it can be reset with the button at the top.
 - the grid allows each note in a scale to be shifted to a different note. for example, all instances of 'c#' can be shifted to 'e'. notes are ordered from c (bottom) to b (top), although the base note can be shifted by semitones with the "pitch" control.
 - "freq smooth" limits how quickly partials can change in frequency. at zero, partials can jump between frequencies instantly, which creates satisfying textures on certain sounds. higher levels create pitch glides. 
 - "amp smooth" limits how quickly partials can change in volume. it sounds similar to the attack and release knobs on a vocoder.
